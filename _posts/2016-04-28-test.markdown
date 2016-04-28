@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Test!"
+image: /img/blog-single-3.jpg
 date:   2016-04-28 10:57:33 -0400
 categories: jekyll update
 ---
