@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-image: /img/blog-single-3.jpg
+imageSmall: /img/blog-single-3.jpg
+imageLarge: /img/blog-single.jpg
 date:   2016-04-28 10:57:33 -0400
 categories: foo bar
 tags: [cloud]
