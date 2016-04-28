@@ -71,7 +71,7 @@ layout: default
                     <ul class="pagination">
                         {% if paginator.previous_page %}
                         <li>
-                            <a href="{{ paginator.previous_page_path | replace: '//', '/' }}" aria-label="Previous">
+                            <a href="{{ paginator.previous_page_path | prepend: site.github.url | replace: '//', '/' }}" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
                             </a>
                         </li>
@@ -91,18 +91,18 @@ layout: default
                         </li>
                         {% elsif page == 1 %}
                         <li>
-                            <a href="{{ paginator.previous_page_path | replace: '//', '/' }}">{{ page }}</a>
+                            <a href="{{ paginator.previous_page_path | prepend: site.github.url | replace: '//', '/' }}">{{ page }}</a>
                         </li>
                         {% else %}
                         <li>
-                            <a href="{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                            <a href="{{ site.paginate_path | prepend: site.github.url | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
                         </li>
                         {% endif %}
                         {% endfor %}
 
                         {% if paginator.next_page %}
                         <li>
-                            <a href="{{ paginator.next_page_path | replace: '//', '/' }}" aria-label="Next">
+                            <a href="{{ paginator.next_page_path | prepend: site.github.url | replace: '//', '/' }}" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
                             </a>
                         </li>
