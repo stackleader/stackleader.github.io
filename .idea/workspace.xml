@@ -2,125 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78890323-70ca-4859-87a3-25f2555f4119" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/Pe-icon-7-stroke.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/Pe-icon-7-stroke.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/et-line.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/et-line.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/themify.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/themify.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/apache-camel-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/axion-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/axion-container.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/blog-single-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/charlotte-night-skyline.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/charlotte-night-skyline2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/charlotte-night-skyline3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/charlotte-night-skyline4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/charlotte.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/charlotte_openstreet_map.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/charlotte_openstreet_map2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/cloud_puzzle.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/cloud_puzzle2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/docker-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/integration-engine-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/karaf-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/lightbox/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/lightbox/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/lightbox/next.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/lightbox/prev.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/stackLeaderLogo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/stackLeaderLogo_clear_email.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/tech_abstract1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2016-04-28-test.markdown" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/custom.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/et-line-icons.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/flexslider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-dosis.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-georgia.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-montserrat.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-opensans.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-oswald.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-pathway.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-poppins.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-roboto.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-robotocondensed.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/font-titillium.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/lightbox.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/pe-icon-7-stroke.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/theme-chipotle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/theme-fire.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/theme-gunmetal.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/theme-hyperblue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/theme-nature.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/theme-navy.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/theme-nearblack.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/theme-offyellow.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/theme-orange.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/theme-purple.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/theme-red.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/theme-startup.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/themify-icons.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/ytplayer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/Pe-icon-7-stroke.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/Pe-icon-7-stroke.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/et-line.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/et-line.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/themify.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/themify.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/contact.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/countdown.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/es5-sham.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/es5-shim.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/flexslider.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/flickr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/ga.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/js-cookie.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/lightbox.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/masonry.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modernizrShim.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/parallax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/respond.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/scripts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/smooth-scroll.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/spectragram.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/twitterfetcher.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/ytplayer.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/icon-github.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/icon-github.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/icon-twitter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/icon-twitter.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sass/_base.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sass/_layout.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sass/_syntax-highlighting.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/main.scss" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/footer.html" afterPath="$PROJECT_DIR$/_includes/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/head.html" afterPath="$PROJECT_DIR$/_includes/head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/header.html" afterPath="$PROJECT_DIR$/_includes/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/post.html" afterPath="$PROJECT_DIR$/_layouts/post.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-04-28-welcome-to-jekyll.markdown" afterPath="$PROJECT_DIR$/_posts/2016-04-28-welcome-to-jekyll.markdown" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about.md" afterPath="$PROJECT_DIR$/about.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="blog.stackleader.com.iws" />
@@ -174,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.703704">
-              <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.20924856">
+              <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
               <folding>
                 <element signature="n#section#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#section#1;n#!!top" expanded="false" />
@@ -192,19 +73,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/about.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.3448277">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -224,19 +92,19 @@
         <entry file="file://$PROJECT_DIR$/_includes/head.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-10.0">
-              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+              <caret line="15" column="37" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016-04-28-welcome-to-jekyll.markdown" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2016-04-28-welcome-to-jekyll.markdown" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2016-04-28-welcome-to-jekyll.markdown">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.083429895">
+            <state vertical-scroll-proportion="-2.4827585">
               <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
               <folding />
             </state>
@@ -272,9 +140,9 @@
         <option value="$PROJECT_DIR$/_includes/header.html" />
         <option value="$PROJECT_DIR$/_includes/footer.html" />
         <option value="$PROJECT_DIR$/_config.yml" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/GemFile" />
         <option value="$PROJECT_DIR$/_posts/2016-04-28-welcome-to-jekyll.markdown" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -456,7 +324,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -584,14 +452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.0714285">
@@ -618,17 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.703704">
-          <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
-          <folding>
-            <element signature="n#section#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#section#1;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -642,9 +491,28 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.083429895">
+        <state vertical-scroll-proportion="-2.4827585">
           <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20924856">
+          <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
+          <folding>
+            <element signature="n#section#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#section#1;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
