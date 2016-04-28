@@ -1,0 +1,14 @@
+/****** PLACE YOUR CUSTOM STYLES HERE ******/
+.logo {
+    font-size: 25px;
+    color: #FFF;
+    font-family: monospace;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.hero-logo {
+    margin-top: -20px;
+}

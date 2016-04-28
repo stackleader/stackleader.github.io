@@ -1,23 +1,185 @@
 ---
 layout: default
 ---
+<section class="page-title page-title-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="uppercase mb0">StackLeader Blog</h3>
+            </div>
+            <div class="col-md-6 text-right">
+                <ol class="breadcrumb breadcrumb-2">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="active">Blog</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+<section class="bg-secondary">
+    <div class="container">
+        <div class="col-md-9">
+            <div class="row masonry-loader">
+                <div class="col-sm-12 text-center">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+            <div class="row masonry masonryFlyIn mb40">
+                {% for post in paginator.posts %}
+                <div class="col-sm-6 post-snippet masonry-item">
+                    <a href="#">
+                        <img alt="Post Image" src="img/blog-single-3.jpg"/>
+                    </a>
 
-<div class="home">
+                    <div class="inner">
+                        <a href="{{ post.url | prepend: site.baseurl }}">
+                            <h5 class="mb0">{{ post.title }}</h5>
+                            <span class="inline-block mb16">{{ post.date | date: "%b %-d, %Y" }}</span>
+                        </a>
+                        <hr>
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo.
+                        </p>
+                        <a class="btn btn-sm" href="{{ post.url | prepend: site.baseurl }}">Read More</a>
+                        <ul class="tags pull-right">
+                            <li>
+                                <a class="btn btn-sm btn-icon" href="#">
+                                    <i class="ti-twitter-alt"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn btn-sm btn-icon" href="#">
+                                    <i class="ti-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--end of snippet-->
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="text-center">
+                    {% if paginator.total_pages > 1 %}
+                    <ul class="pagination">
+                        {% if paginator.previous_page %}
+                        <li>
+                            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
 
-  <h1 class="page-heading">Posts</h1>
+                        {% else %}
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        {% endif %}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                        {% for page in (1..paginator.total_pages) %}
+                        {% if page == paginator.page %}
+                        <li class="active">
+                            <a href="#">{{ page }}</a>
+                        </li>
+                        {% elsif page == 1 %}
+                        <li>
+                            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+                        </li>
+                        {% else %}
+                        <li>
+                            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+                        {% if paginator.next_page %}
+                        <li>
+                            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                        {% else %}
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        <div class="col-md-3 hidden-sm">
+            <div class="widget bg-secondary p24">
+                <h5 class="uppercase mb16">Subscribe Now</h5>
+                <p>
+                    Subscribe to our newsletter for a round-up of the week's most popular articles.
+                </p>
+                <form>
+                    <input type="text" class="mb0" name="email" placeholder="Email Address" />
+                    <input type="submit" value="Subscribe" />
+                </form>
+            </div>
+            <!--end of widget-->
+            <div class="widget">
+                <h6 class="title">Blog Categories</h6>
+                <hr>
+                <ul class="link-list">
+                    <li>
+                        <a href="#">Lifestyle</a>
+                    </li>
+                    <li>
+                        <a href="#">Web Design</a>
+                    </li>
+                    <li>
+                        <a href="#">Photography</a>
+                    </li>
+                    <li>
+                        <a href="#">Freelance</a>
+                    </li>
+                </ul>
+            </div>
+            <!--end of widget-->
+            <div class="widget">
+                <h6 class="title">Recent Posts</h6>
+                <hr>
+                <ul class="link-list recent-posts">
+                    <li>
+                        <a href="#">A simple image post for starters</a>
+                        <span class="date">September 23, 2015</span>
+                    </li>
+                    <li>
+                        <a href="#">An audio post for good measure</a>
+                        <span class="date">September 19, 2015</span>
+                    </li>
+                    <li>
+                        <a href="#">A thoguhtful blockquote post on life</a>
+                        <span class="date">September 07, 2015</span>
+                    </li>
+                </ul>
+            </div>
+            <!--end of widget-->
+            <div class="widget">
+                <h6 class="title">Latest Updates</h6>
+                <hr>
+                <div class="twitter-feed">
+                    <div class="tweets-feed" data-widget-id="492085717044981760">
+                    </div>
+                </div>
+            </div>
+            <!--end of widget-->
+        </div>
+        <!--end of sidebar-->
+    </div>
+</section>
 
-</div>
