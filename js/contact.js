@@ -1,24 +1,10 @@
 $(document).ready(function () {
-  var isSignupHidden = Cookies.get('isSignupHidden');
-  if (!isSignupHidden) {
-    setTimeout(function () {
-      $(".NewsletterSignup").removeClass("hidden");
-    }, 5000);
-  }
-  $(".close-newsletter").click(function () {
-    hideNewsletterSignup();
-  });
 
   $("form.contact").on("submit", function (event) {
     event.preventDefault();
     $("form.contact .submit").val("Sending...");
-    $.post("/contacts", $(this).serialize(), function (data) {
-      $('.ContactPage .contact-form').html('<h4>We look forward to meeting you!</h4>');
-      $('.IntegrationEngine .contact-form').html('<h4>Thank you for your interest!</h4>');
-      $('.NewsletterSignup .contact-form').html('<h4>Thank you for your interest!</h4>');
-      setTimeout(function () {
-        hideNewsletterSignup();
-      }, 1000);
+    $.post("https://stackleader.com/contacts", $(this).serialize(), function (data) {
+      $('.contact-form').html('<h4>Thank you for your interest!</h4>');
     }).fail(function () {
       $(".contact-form .alert").text("An error occurred.  Please try again.");
       $(".contact-form .alert").removeClass("hidden");
@@ -27,16 +13,8 @@ $(document).ready(function () {
     });
   });
 
-  $('.validate-required, .validate-email').on('blur change', function () {
-    validateFields($(this).closest('form'));
-  });
 
 });
-
-function hideNewsletterSignup() {
-  $(".NewsletterSignup").addClass("hidden");
-  Cookies.set('isSignupHidden', true);
-}
 
 
 function validateFields(form) {
