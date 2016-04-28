@@ -10,5 +10,5 @@ github_username:  stackleader
 # Build settings
 markdown: kramdown
 gems: [jekyll-paginate]
-paginate: 1
+paginate: 10
 paginate_path: "/pages/page:num/"
