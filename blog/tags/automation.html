@@ -1,7 +1,7 @@
 ---
 layout: default
-tag: cloud
-permalink: /tags/cloud/
+tag: automation
+permalink: /tags/automation/
 ---
 <section class="page-title page-title-4">
     <div class="container">
@@ -54,42 +54,9 @@ permalink: /tags/cloud/
                 {% else %}
                 {% assign tags_content = '' %}
                 {% endif %}
-                
-                <div class="col-sm-6 post-snippet masonry-item">
-                    <a href="#">
-                        <img alt="Post Image" src="{{ post.imageSmall | prepend: site.github.url }}"/>
-                    </a>
 
-                    <div class="inner">
-                        <a href="{{ post.url | prepend: site.github.url }}">
-                            <h5 class="mb0">{{ post.title }}</h5>
-                            <span class="inline-block mb16" style="margin-bottom:0">
-                                {{ post.date | date: "%b %-d, %Y" }} <br/>
-                            </span>
+                {% include card.html %}
 
-                        </a>
-                        <p style="margin-bottom: 10px">{{ tags_content }}</p>
-                        <hr>
-                        <p>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem aperiam, eaque ipsa quae ab illo.
-                        </p>
-                        <a class="btn btn-sm" href="{{ post.url | prepend: site.github.url }}">Read More</a>
-                        <ul class="tags pull-right">
-                            <li>
-                                <a class="btn btn-sm btn-icon" href="#">
-                                    <i class="ti-twitter-alt"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="btn btn-sm btn-icon" href="#">
-                                    <i class="ti-facebook"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!--end of snippet-->
                 {% endfor %}
             </div>
             <div class="row">
