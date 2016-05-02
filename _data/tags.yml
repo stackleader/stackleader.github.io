@@ -1,2 +1,8 @@
 - slug: automation
   name: Automation
+
+- slug: docker
+  name: Docker
+
+- slug: osgi
+  name: OSGi

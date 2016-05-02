@@ -505,7 +505,7 @@ blockquote .author {
   -webkit-column-count: 2;
 }
 @media all and (max-width: 767px) {
-  
+
   blockquote {
     font-size: 16px;
     line-height: 32px;
