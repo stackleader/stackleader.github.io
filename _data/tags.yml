@@ -6,3 +6,6 @@
 
 - slug: osgi
   name: OSGi
+
+- slug: camel
+  name: camel

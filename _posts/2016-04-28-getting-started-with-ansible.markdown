@@ -28,7 +28,7 @@ A playbook will have the following file structure:
 | roles/deploy_com_johneckstein/tasks | The tasks to execute for this role |
 | roles/deploy_com_johneckstein/templates | Templates using the jinja2 templating engine |
 
-####Variables####
+#### Variables
 Variables play a very important role in Ansible. The goal of your playbook is to create a series of tasks that are all executed regardless of which environment you are deploying to. The tasks will not change but the variables that are defined for that environment (e.g dev, prod) will change. Variables can be defined in several locations throughout the playbook and it is important to understand the precedence for each of these locations. 
 
 {% highlight text %}
@@ -47,7 +47,7 @@ Above is from the Ansible documentation. I will add that...
 * Child group vars override parent group vars and host vars override group vars
 * The group_vars/all will provide site wide defaults but these can be overridden by the specific group vars
 
-####Templating####
+#### Templating
 Ansible uses the Jinja2 templating system to template the playbooks and for the template module. Variables may be referenced throughout the playbook with following syntax: ```{% raw %}{{variable_name}}{% endraw %}```. For example, the playbook deployment_com_johneckstein.yml templatizes the host and remote_user variables.
 
 {% highlight text %}
@@ -81,7 +81,7 @@ Jinja allows filters to manipulate the data for a placeholder. Use the "\|" symb
 {% endraw %}
 {% endhighlight %}
 
-####Role Dependencies####
+#### Role Dependencies
 Roles may have dependencies on other roles. Dependencies for a role are defined in the ```meta/main.yml``` file within the role's folder. Let's take a look at ```roles/deploy_com_johneckstein/meta``` for an example.
 
 {% highlight yaml %}
@@ -92,7 +92,7 @@ Roles may have dependencies on other roles. Dependencies for a role are defined 
 {% endraw %}
 {% endhighlight %}
      
-####Tasks####
+#### Tasks
 A playbook may execute several tasks but each task is logically grouped into roles. Let's take a look at ```roles/deploy_com_johneckstein_example/tasks/main.yml``` for an example.
 
 {% highlight yaml %}
@@ -112,7 +112,7 @@ This role defines two tasks. The name section simply defines a name for this tas
 
 The verify deployment task uses the script module. The script attribute of this task defines a script path that is relative to the files directory in the role. Following the script name is a space delimited list of arguments to pass to the script when executed. Ansible will copy this script to the host and execute it in a temporary location.
 
-####Inventory####
+#### Inventory
 The inventory within Ansible defines available hosts and how they are grouped. You can also define properties that are specific to a host by adding the property inline with the hostname.
 
 {% highlight yaml %}
@@ -136,7 +136,7 @@ The inventory within Ansible defines available hosts and how they are grouped. Y
 
 The group names are defined within the square brackets. This name should correspond to a file in ```group_vars/``` for group specific properties.
 
-####Running the Sample Playbook####
+#### Running the Sample Playbook
 
 Now that we have a basic understanding of an Ansible project. let's work through the sample playbook that I have provided for this lab. <https://github.com/jeckste/getting_started_with_ansible>
 

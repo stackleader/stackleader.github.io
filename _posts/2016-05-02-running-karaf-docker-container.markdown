@@ -25,7 +25,7 @@ docker pull stackleader/karaf:latest
 
 The container can be started in server mode and client/shell mode
 
-####Server Mode####
+#### Server Mode
 
 With this mode, all logs will print to stdout for the container.  Type Ctrl-C to quit.
 
@@ -33,7 +33,7 @@ With this mode, all logs will print to stdout for the container.  Type Ctrl-C to
 docker run -it -p 5005:5005 -p 8181:8181 -v ~/.m2:/opt/karaf/.m2 stackleader/karaf
 {% endhighlight %} 
 
-####Shell Mode####
+#### Shell Mode
 
 With this mode, the karaf shell will be available when the container starts.  Type Ctrl-D to quit.
 
@@ -41,7 +41,7 @@ With this mode, the karaf shell will be available when the container starts.  Ty
 docker run -it -p 5005:5005 -p 8181:8181 -v ~/.m2:/opt/karaf/.m2 stackleader/karaf shell
 {% endhighlight %} 
 
-####Parameters####
+#### Parameters
 
 | -it | Start the container in interactive mode so that Ctrl-C/D and the shell function properly |
 | -p 5005:5005 | Bind the debug port 5005 to the host so that debugging is possible |
