@@ -9,3 +9,9 @@
 
 - slug: camel
   name: Apache Camel
+
+- slug: cloud
+  name: Cloud
+
+- slug: node
+  name: Node.js
