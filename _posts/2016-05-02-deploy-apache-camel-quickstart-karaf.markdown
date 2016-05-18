@@ -82,7 +82,7 @@ The focus of this post is on the RouteBuilder for the REST service.  Please see 
 Apache Camel, Declarative services, and OSGi.
 
 The RouteBuilder class [ServiceRB.java](https://github.com/stackleader/camel-quickstarts/blob/master/rest/com.stackleader.camel.quickstart.rest/src/main/java/com/stackleader/camel/quickstart/rest/service/ServiceRB.java) defines the configuration and routing 
-for the REST endpoint.  First the REST dsl with Camel is used to setup an endpoint use the jetty9 camel component.  It also
+for the REST endpoint.  First the REST dsl with Camel is used to setup an endpoint using the jetty9 camel component.  It also
 configures the endpoint to bind to port 8181 and that it should automatically unmarshal and marshal to JSON.  When a 
 binding mode is specified, it will automatically search for an implementation of that mode on the classpath.  In this case, 
 Jackson is already on the classpath by loading the camel-jackson feature which contains the JSON Jackson data format.
