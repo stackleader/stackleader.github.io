@@ -30,7 +30,7 @@ Clone the project locally.
 
 Next, you will need to login into your AWS account, setup AWS SES, and create AWS IAM credentials for AWS SES. 
 
-#####AWS SES Configuration
+##### AWS SES Configuration
 
 Navigate to the SES control panel in AWS or follow the link below.
 
@@ -52,7 +52,7 @@ fairly quickly after submission.
 If this is your first time using AWS SES then you will have sending restrictions.  You must request to have the restrictions
 lifted from the SES console.  Until the limits are lifted, you can only send emails to your verified email addresses.
 
-#####AWS IAM
+##### AWS IAM
 
 Navigate to the IAM control panel in AWS or follow the link below
 
@@ -65,7 +65,7 @@ Now that a user is generated, return to the Users list and select the new user. 
 Select attach policy.  Search for `AmazonSESFullAccess`, select it, and then Attach Policy.  You have successfully created 
 a user capable of sending SES email!
 
-#####Node.js project configuration
+##### Node.js project configuration
 
 Create a properties.txt file at `node-quickstarts/aws/ses/send/properties.txt` with the following contents.
 
