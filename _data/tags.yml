@@ -12,6 +12,9 @@
 
 - slug: cloud
   name: Cloud
+  
+- slug: dependency_injection
+  name: Dependency Injection
 
 - slug: node
   name: Node.js
