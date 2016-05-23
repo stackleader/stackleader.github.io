@@ -32,8 +32,10 @@ The Felix SCR Declarative Services Implementation reduces the ceremonial boilerp
 by introducing a dependency injection system that is designed for dealing with the dynamic nature of OSGi services. 
 
 #### What is Dependency Injection?
-I often like to introduce new developers to dependency injection frameworks by emphasizing that a dependency injection framework is a system 
-that takes on the responsibility of instantiating objects on your behalf and optionally "injecting" this managed object with references to any other 
-managed objects it has expressed a dependency on. Put more formally, dependency injection is a form of "inversion of control" where instead 
-of an object taking on the responsibility of building or locating it's dependencies, they are provided (i.e. injected) to the object by the dependency 
-injection framework. 
+It is much easier to explain what dependency injection is once one understands it to be a feature of an object lifecycle management framework. The more formal 
+definitions tend to overlook this bit of context. Put somewhat more formally, dependency injection is a form of "inversion of control" where instead 
+of an object being passed all of its dependencies through its constructor, or through building or manually locating them, they are provided (i.e. injected) 
+to the object by the dependency injection framework. For any of this to be possible, the object that is being "injected" with its dependencies 
+must be managed by the dependency injection framework (i.e. it will be instantiated by the framework). 
+
+
