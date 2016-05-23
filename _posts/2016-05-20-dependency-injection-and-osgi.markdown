@@ -28,7 +28,7 @@ interface-based programming by strictly enforcing the dependency inversion princ
 In a typical scenario, OSGi bundles will export packages containing high level abstractions (e.g. interfaces), and leave implementation classes hidden. 
 This all adds up to the ability to enforce good OOP design through runtime classloader boundaries.
 
-The Felix SCR Declarative Services Implementation reduces the ceremonial boilerplate out of interacting with the service registry. It achieves this in part
+The Felix SCR Declarative Services Implementation removes the ceremonial boilerplate from interacting with the service registry. It achieves this in part
 by introducing a dependency injection system that is designed for dealing with the dynamic nature of OSGi services. 
 
 #### What is Dependency Injection?
