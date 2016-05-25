@@ -23,13 +23,12 @@ Dependency injection is a form of [\"inversion of control\"](https://en.wikipedi
 #### Benefits of Dependency Injection Containers
 There are many benefits to using a depdency injection container, but I will only cover this briefly since the topic has been covered well elsewhere (e.g. [here](https://www.youtube.com/watch?v=8RGhT-YySDY),). 
 
- * Reduced boilerplate (e.g. factories, singletons)
- * Simplifies use of abstractions
- * Dependency graph is explicit, making it easier to avoid depdency cycles (very common in when static object references are easy to reference... i.e. singleton pattern)
- * Testing is simplified 
-  * dependencies are explicit
-  * Easier to mock
- * Makes modularity easier to achieve
-  * encourages single responsibility principle
-
+ + Reduces boilerplate (e.g. factories, singletons)
+ + Simplifies use of abstractions
+ + Dependency graph is explicit, making it easier to avoid depdency cycles (very common in when static object references are easy to reference... i.e. singleton pattern)
+ + Testing is simplified 
+   + Dependencies are explicit
+   + Dependencies are easier to mock
+ + Modularity easier to achieve
+   + encourages single responsibility principle
 
