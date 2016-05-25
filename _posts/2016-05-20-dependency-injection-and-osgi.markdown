@@ -17,16 +17,24 @@ Dependency injection is a form of [\"inversion of control\"](https://en.wikipedi
 
 #### Benefits of Dependency Injection Containers
 There are many significant benefits to using a depdency injection container, but I will only cover this briefly since the topic has been covered well elsewhere (e.g. [here](https://www.youtube.com/watch?v=8RGhT-YySDY),). 
-
- + Reduces boilerplate (e.g. factories, singletons)
- + Simplifies use of abstractions
- + Dependency graph is explicit, making it easier to avoid depdency cycles (very common in when static object references are easy to reference... i.e. singleton pattern)
- + Testing is simplified 
-   + Dependencies are explicit
-   + Dependencies are easier to mock
- + Modularity easier to achieve
-   + encourages single responsibility principle
-
+<div class="normal-list-style">
+    <ul>
+        <li>Reduces boilerplate (e.g. factories, singletons)</li>
+        <li>Simplifies use of abstractions</li>
+        <li>Dependency graph is explicit, making it easier to avoid depdency cycles (very common in when static object references are easy to reference… i.e. singleton pattern)</li>
+        <li>Testing is simplified
+            <ul>
+                <li>Dependencies are explicit</li>
+                <li>Dependencies are easier to mock</li>
+            </ul>
+        </li>
+        <li>Modularity easier to achieve
+            <ul>
+                <li>encourages single responsibility principle</li>
+            </ul>
+        </li>
+    </ul>
+</div>
 #### What is the Apache Felix Service Component Runtime?
 The Apache Felix Service Component Runtime (SCR) is an implementation of the OSGi Declarative Services specification, a specification designed with the expressed purpose of simplifying the creation and consumption of OSGi services. To unpack this a bit more, it's important to understand that in OSGi, "services" and not objects are intended to be the design primitives. An OSGi service is a java object implementing one or more interfaces that is placed into (i.e. "registered") the service registry. Services in the service registry are expected to be consumed through their abstractions (i.e. their interfaces), allowing implementation details to be hidden from service consumers. The design of the service registry coupled with the bundle classloading architecture in OSGi allows for the enforcement of interface-based programming through the enforcement of the [dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle). 
 
