@@ -20,20 +20,22 @@ and enforce many OOP (Object Oriented Programming) best practices.
 #### What is the Apache Felix Service Component Runtime?
 The Apache Felix Service Component Runtime (SCR) is an implementation of the OSGi Declarative Services specification, a specification designed with the expressed purpose of 
 simplifying the creation and consumption of OSGi services. To unpack this a bit more, it's important to understand that in OSGi, "services" and not objects are 
-the design primitives. An OSGi service is a java object implementing one or more interfaces that is placed into (i.e. "registered") the service registry. Services in 
-the service registry are designed to be consumed through their abstractions (i.e. their interfaces), allowing implementation details to be hidden 
+intended to be the design primitives. An OSGi service is a java object implementing one or more interfaces that is placed into (i.e. "registered") the service registry. Services in 
+the service registry are expected to be consumed through their abstractions (i.e. their interfaces), allowing implementation details to be hidden 
 from service consumers. The design of the service registry coupled with the bundle classloading architecture in OSGi allows for the enforcement of 
-interface-based programming by strictly enforcing the dependency inversion principle (see https://en.wikipedia.org/wiki/Dependency_inversion_principle). 
+interface-based programming through the enforcement of the [dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle). 
 
 In a typical scenario, OSGi bundles will export packages containing high level abstractions (e.g. interfaces), and leave implementation classes hidden. 
-This all adds up to the ability to enforce good OOP design through runtime classloader boundaries.
+This allows developers to enforce good OOP design through runtime classloader boundaries.
 
 The Felix SCR Declarative Services Implementation reduces the ceremonial boilerplate out of interacting with the service registry. It achieves this in part
 by introducing a dependency injection system that is designed for dealing with the dynamic nature of OSGi services. 
 
 #### What is Dependency Injection?
 I often like to introduce new developers to dependency injection frameworks by emphasizing that a dependency injection framework is a system 
-that takes on the responsibility of instantiating objects on your behalf and optionally "injecting" this managed object with references to any other 
-managed objects it has expressed a dependency on. Put more formally, dependency injection is a form of "inversion of control" where instead 
+that takes on the responsibility of instantiating objects on your behalf and optionally "injecting" managed object with references to other 
+managed objects it has expressed a dependency on. Dependency injection is a form of [\"inversion of control\"](https://en.wikipedia.org/wiki/Inversion_of_control) where instead 
 of an object taking on the responsibility of building or locating it's dependencies, they are provided (i.e. injected) to the object by the dependency 
 injection framework. 
+
+
