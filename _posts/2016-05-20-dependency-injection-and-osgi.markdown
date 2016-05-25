@@ -35,6 +35,7 @@ There are many significant benefits to using a depdency injection container, but
         </li>
     </ul>
 </div>
+
 #### What is the Apache Felix Service Component Runtime?
 The Apache Felix Service Component Runtime (SCR) is an implementation of the OSGi Declarative Services specification, a specification designed with the expressed purpose of simplifying the creation and consumption of OSGi services. To unpack this a bit more, it's important to understand that in OSGi, "services" and not objects are intended to be the design primitives. An OSGi service is a java object implementing one or more interfaces that is placed into (i.e. "registered") the service registry. Services in the service registry are expected to be consumed through their abstractions (i.e. their interfaces), allowing implementation details to be hidden from service consumers. The design of the service registry coupled with the bundle classloading architecture in OSGi allows for the enforcement of interface-based programming through the enforcement of the [dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle). 
 
