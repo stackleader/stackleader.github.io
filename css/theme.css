@@ -64,14 +64,12 @@ body.boxed-layout,
   left: 0;
   right: 0;
 }
-/*
 ul {
-   list-style: none; 
+  list-style: none;
 }
 ul.bullets {
   list-style: inside;
 }
-*/
 .main-container {
   clear: both;
 }
@@ -262,6 +260,7 @@ h4,
 h5,
 h6,
 p,
+ul,
 ol,
 pre,
 table,
