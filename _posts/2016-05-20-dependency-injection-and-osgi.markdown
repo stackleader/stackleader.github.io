@@ -10,7 +10,7 @@ tags: [osgi, dependency_injection]
 ---
 
 With project Jigsaw and Java 9 coming soon (~March 2017), modular software has become a hot topic of discussion at conferences and meetups. 
-For us fans of OSGi, project Jigsaw is simultaneously exciting and disappointing. It's exciting to see the community focusing on and discussing the many benefits of modularity, but it's also disappointing to see that project Jigsaw will for now largely fail to meet the needs of application developers who wish to build robust modular software systems (more on this in a future blog perhaps). The good news of course is that java developers already have access to a robust and mature framework for developing modular software systems, OSGi. In this post, I'd like to introduce the Apache Felix Service Component Runtime (SCR) implementation of the OSGi Declarative Services Specification, and how it can be used as a powerful dependency injection container to facilitate and enforce many OOP (Object Oriented Programming) best practices.
+For us fans of OSGi, project Jigsaw is simultaneously exciting and disappointing. It's exciting to see the community focusing on and discussing the many benefits of modularity, but it's also disappointing to see that project Jigsaw will for now largely fail to meet the needs of application developers who wish to build robust modular software systems (more on this in a future blog perhaps). The good news of course is that java developers already have access to a robust and mature framework for developing modular software systems, OSGi. In this post, I'd like to introduce the Apache Felix Service Component Runtime (SCR) implementation of the OSGi Declarative Services Specification, and how it can be used as a powerful dependency injection container to facilitate and enforce many OOP (Object Oriented Programming) best practices as you develop modular software with OSGi.
 
 #### What is Dependency Injection?
 Dependency injection is a form of [\"inversion of control\"](https://en.wikipedia.org/wiki/Inversion_of_control) where instead of an object being passed all of its dependencies through a **manual** call to its constructor, or through building or manually locating them,they are provided (i.e. injected) to the object by a container. Many injection containers emphasize or enforce "constructor injection", but its the container that takes on the responsibility for instantiating the object with the references to its dependencies. The idea of a container managing the lifecycle of objects is something that can take some getting use to if you are new to the world of dependency injection; however, once it is understood that objects that will undergo dependency injection are objects that are "managed" by a container, it should be easier to get your head around the concept.
@@ -49,7 +49,7 @@ In this first example, we simply use annotations to instantiate a component (an 
  
 
 ##### Completed Project Download
-For reference, you can download the completed project from [here](https://drive.google.com/file/d/0Bz6zdXGc_G2PRktpVFZmN3ZGdUk/view?usp=sharing). For the source, you can checkout the code from [github](https://github.com/stackleader/).
+For reference, you can download the completed project from [here](https://drive.google.com/file/d/0Bz6zdXGc_G2PRktpVFZmN3ZGdUk/view?usp=sharing). For the source, you can checkout the code from [github](https://github.com/stackleader/osgi-scr-examples).
 
 ###### Completed Project Contents
 The completed example project contains the latest apache-felix distribution supplemented with the felix-scr runtime bundle, a few logging related bundles, and the custom OSGi bundle generated from our maven project.
@@ -217,6 +217,10 @@ public class HelloScrWorld {
                          all SCR annotations and include the component declarations in 
                         our manfiest file. -->
                         <Service-Component>*</Service-Component>
+                        <!-- This is included as a best practice, by default this plugin 
+                        will expose all packages. In our case, we do not want to expose 
+                        any packages.-->
+                        <Export-Package></Export-Package>
                     </instructions>
                 </configuration>
             </plugin>  
@@ -234,7 +238,7 @@ An ordinary 'mvn install' command will produce the following jar file.
 
 {% highlight text %}
 Manifest-Version: 1.0
-Bnd-LastModified: 1464274144115
+Bnd-LastModified: 1464354998998
 Build-Jdk: 1.8.0_74
 Built-By: dcnorris
 Bundle-ManifestVersion: 2
@@ -242,13 +246,11 @@ Bundle-Name: com.stackleader.training.osgi.scr
 Bundle-SymbolicName: com.stackleader.training.osgi.scr
 Bundle-Version: 0.0.1
 Created-By: Apache Maven Bundle Plugin
-Export-Package: com.stackleader.training.osgi.scr;version="0.0.1"
 Import-Package: org.slf4j;version="[1.7,2)"
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.5))"
 Service-Component: OSGI-INF/com.stackleader.training.osgi.scr.HelloScrWo
  rld.xml
 Tool: Bnd-3.0.0.201509101326
-
 {% endhighlight %} 
 
 ####### Generated SCR Descriptor (com.stackleader.training.osgi.scr.HelloScrWorld.xml)
@@ -280,7 +282,7 @@ cd felix-framework-5.4.0
 java -jar bin/felix.jar
 {% endhighlight %} 
 
-This should launch the gogo shell. Also, you should see the logging output from the SCR container initalizing and activating our component.
+This will launch the gogo shell. Also, you should see the logging output from the SCR container initalizing and activating our component.
 
 Exmaple Output:
 {% highlight text %}
