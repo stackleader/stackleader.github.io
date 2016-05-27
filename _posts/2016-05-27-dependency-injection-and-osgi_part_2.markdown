@@ -16,7 +16,7 @@ tags: [osgi, dependency_injection]
 First we will define an interface for our service. We will use this interface to expose our service to the service registry for injection into our service client. 
 
 ##### Completed Project Download
-For reference, you can download the completed project from [here](https://drive.google.com/file/d/0Bz6zdXGc_G2PUGtMTFlyUXU0X2M/view?usp=sharing){:target="_blank"}. For the source, you can checkout the code from [github](https://github.com/stackleader/osgi-scr-examples){:target="_blank"}.
+For reference, you can download the completed project from [here](https://drive.google.com/file/d/0Bz6zdXGc_G2PUGtMTFlyUXU0X2M/view?usp=sharing){:target="_blank"}. For the source, you can checkout the code from [github](https://github.com/stackleader/osgi-examples){:target="_blank"}.
 
 ##### Interface
 {% highlight java %}
@@ -109,7 +109,7 @@ public class GreetingServiceImpl implements GreetingService {
                     <instructions>
                         <!--This instruction tells the maven bundle plugin to process 
                          all SCR annotations and include the component declarations in 
-                        our manfiest file. -->
+                        our manifest file. -->
                         <Service-Component>*</Service-Component>
                         <!--We will expose only the package containing our interface, and hide our implementation class.-->
                         <Export-Package>${project.artifactId}</Export-Package>
