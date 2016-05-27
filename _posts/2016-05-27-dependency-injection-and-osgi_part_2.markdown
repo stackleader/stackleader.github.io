@@ -10,13 +10,13 @@ tags: [osgi, dependency_injection]
 ---
 
 ### Creating and Consuming Services with SCR
-[Part 1](/osgi/2016/05/20/dependency-injection-and-osgi.html) of this blog covers the basics of SCR, so it is best to start with this material if you are new to SCR or dependency injection. In the post we will cover creating SCR (Service Component Runtime) components that expose and consume OSGi services. Lets start with creating a bundle with a component that exposes a service.
+[Part 1](/osgi/2016/05/20/dependency-injection-and-osgi.html){:target="_blank"} of this blog covers the basics of SCR, so it is best to start with this material if you are new to SCR or dependency injection. In the post we will cover creating SCR (Service Component Runtime) components that expose and consume OSGi services. Lets start with creating a bundle with a component that exposes a service.
 
 #### GreetingService
 First we will define an interface for our service. We will use this interface to expose our service to the service registry for injection into our service client. 
 
 ##### Completed Project Download
-For reference, you can download the completed project from [here](https://drive.google.com/file/d/0Bz6zdXGc_G2PUGtMTFlyUXU0X2M/view?usp=sharing). For the source, you can checkout the code from [github](https://github.com/stackleader/osgi-scr-examples).
+For reference, you can download the completed project from [here](https://drive.google.com/file/d/0Bz6zdXGc_G2PUGtMTFlyUXU0X2M/view?usp=sharing){:target="_blank"}. For the source, you can checkout the code from [github](https://github.com/stackleader/osgi-scr-examples){:target="_blank"}.
 
 ##### Interface
 {% highlight java %}

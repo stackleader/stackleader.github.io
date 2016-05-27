@@ -16,7 +16,7 @@ For us fans of OSGi, project Jigsaw is simultaneously exciting and disappointing
 Dependency injection is a form of [\"inversion of control\"](https://en.wikipedia.org/wiki/Inversion_of_control) where instead of an object being passed all of its dependencies through a **manual** call to its constructor, or through building or manually locating them,they are provided (i.e. injected) to the object by a container. Many injection containers emphasize or enforce "constructor injection", but its the container that takes on the responsibility for instantiating the object with the references to its dependencies. The idea of a container managing the lifecycle of objects is something that can take some getting use to if you are new to the world of dependency injection; however, once it is understood that objects that will undergo dependency injection are objects that are "managed" by a container, it should be easier to get your head around the concept.
 
 #### Benefits of Dependency Injection Containers
-There are many significant benefits to using a dependency injection container, but I will only cover this briefly since the topic has been covered well elsewhere (e.g. [here](https://www.youtube.com/watch?v=8RGhT-YySDY),). 
+There are many significant benefits to using a dependency injection container, but I will only cover this briefly since the topic has been covered well elsewhere (e.g. [here](https://www.youtube.com/watch?v=8RGhT-YySDY)){:target="_blank"}. 
 <div class="normal-list-style">
     <ul>
         <li>Reduces boilerplate (e.g. factories, singletons)</li>
@@ -37,7 +37,7 @@ There are many significant benefits to using a dependency injection container, b
 </div>
 
 #### What is the Apache Felix Service Component Runtime?
-The Apache Felix Service Component Runtime (SCR) is an implementation of the OSGi Declarative Services specification, a specification designed with the expressed purpose of simplifying the creation and consumption of OSGi services. To unpack this a bit more, it's important to understand that in OSGi, "services" and not objects are intended to be the design primitives. An OSGi service is a java object implementing one or more interfaces that is placed (i.e. "registered") into the service registry. Services in the service registry are expected to be consumed through their abstractions (i.e. their interfaces), allowing implementation details to be hidden from service consumers. The design of the service registry coupled with the bundle classloading architecture in OSGi allows for the enforcement of interface-based programming through the enforcement of the [dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle). 
+The Apache Felix Service Component Runtime (SCR) is an implementation of the OSGi Declarative Services specification, a specification designed with the expressed purpose of simplifying the creation and consumption of OSGi services. To unpack this a bit more, it's important to understand that in OSGi, "services" and not objects are intended to be the design primitives. An OSGi service is a java object implementing one or more interfaces that is placed (i.e. "registered") into the service registry. Services in the service registry are expected to be consumed through their abstractions (i.e. their interfaces), allowing implementation details to be hidden from service consumers. The design of the service registry coupled with the bundle classloading architecture in OSGi allows for the enforcement of interface-based programming through the enforcement of the [dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle){:target="_blank"}. 
 
 In a typical scenario, OSGi bundles will export packages containing high level abstractions (e.g. interfaces), and leave implementation classes hidden. This allows developers to enforce good OOP design through runtime classloader boundaries. Working with the service registry has historically involved a fairly significant amount of boilerplate code and services dependencies have been resolved using the service locator pattern. The Felix SCR Declarative Services Implementation removes the ceremonial boilerplate from interacting with the service registry by introducing a dependency injection container that is designed for dealing with the dynamic nature of OSGi services. 
 
@@ -49,7 +49,7 @@ In this first example, we simply use annotations to instantiate a component (an 
  
 
 ##### Completed Project Download
-For reference, you can download the completed project from [here](https://drive.google.com/file/d/0Bz6zdXGc_G2PRktpVFZmN3ZGdUk/view?usp=sharing). For the source, you can checkout the code from [github](https://github.com/stackleader/osgi-scr-examples).
+For reference, you can download the completed project from [here](https://drive.google.com/file/d/0Bz6zdXGc_G2PRktpVFZmN3ZGdUk/view?usp=sharing){:target="_blank"}. For the source, you can checkout the code from [github](https://github.com/stackleader/osgi-scr-examples){:target="_blank"}.
 
 ###### Completed Project Contents
 The completed example project contains the latest apache-felix distribution supplemented with the felix-scr runtime bundle, a few logging related bundles, and the custom OSGi bundle generated from our maven project.
@@ -268,7 +268,7 @@ Tool: Bnd-3.0.0.201509101326
 
 
 #### Running the Project
-After downloading the completed project ([link](https://drive.google.com/file/d/0Bz6zdXGc_G2PRktpVFZmN3ZGdUk/view?usp=sharing)), you can run the project.
+After downloading the completed project ([link](https://drive.google.com/file/d/0Bz6zdXGc_G2PRktpVFZmN3ZGdUk/view?usp=sharing)){:target="_blank"}, you can run the project.
  
  1. Navigate to the download location and explode the compressed artifact. 
  2. Move into the root of the exploded artifact (i.e. the felix-framework-5.4.0 directory)
@@ -305,5 +305,5 @@ Example Output:
 Full Example Shell)
 ![Project Run Summary](/img/blog/scr_example_4.png)
 
-### Coming Soon
-In part 2, we will cover creating and consuming services with SCR.
+### Part 2
+In [part 2](osgi/2016/05/27/dependency-injection-and-osgi_part_2.html){:target="_blank"}, we will cover creating and consuming services with SCR.
