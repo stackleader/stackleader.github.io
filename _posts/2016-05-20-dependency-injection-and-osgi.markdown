@@ -306,4 +306,4 @@ Full Example Shell)
 ![Project Run Summary](/img/blog/scr_example_4.png)
 
 ### Part 2
-In [part 2](osgi/2016/05/27/dependency-injection-and-osgi_part_2.html){:target="_blank"}, we will cover creating and consuming services with SCR.
+In [part 2](/osgi/2016/05/27/dependency-injection-and-osgi_part_2.html){:target="_blank"}, we will cover creating and consuming services with SCR.
