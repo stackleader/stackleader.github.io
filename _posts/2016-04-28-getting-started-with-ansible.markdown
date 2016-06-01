@@ -144,7 +144,7 @@ Now that we have a basic understanding of an Ansible project. let's work through
  git clone https://github.com/jeckste/getting_started_with_ansible.git 
 {% endhighlight %}
 
-You should be able to run this playbook on any linux or Mac OS X system. Go ahead and navigate to the folder ```getting_started_with_ansible/introduction```. Now let's run the playbook from the command line. Don't forget to replace ```YOUR_OS_USERNAME``` with the username that you are currently logged in with.
+You should be able to run this playbook on any Linux or Mac OS X system. Go ahead and navigate to the folder ```getting_started_with_ansible/introduction```. Now let's run the playbook from the command line. Don't forget to replace ```YOUR_OS_USERNAME``` with the username that you are currently logged in with.
 
 {% highlight yaml %}
 ansible-playbook -i inventory deployment_com_johneckstein_example.yml -e 'hosts=local user=YOUR_OS_USERNAME version=1.0.0 ' --tags "deploy" 
