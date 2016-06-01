@@ -3,7 +3,7 @@ title: StackLeader Blog
 email: contact@stackleader.com
 description: > # The StackLeader Blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "https://stackleader.com" # the base hostname & protocol for your site
 twitter_username: stackleader_inc
 github_username:  stackleader
 
