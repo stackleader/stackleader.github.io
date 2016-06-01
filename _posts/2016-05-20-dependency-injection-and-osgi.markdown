@@ -8,7 +8,29 @@ date:   2016-05-20 10:24:00 -0400
 categories: osgi
 tags: [osgi, dependency_injection]
 ---
+<!-- MarkdownTOC -->
 
+- [Overview](#overview)
+- [What is Dependency Injection?](#what-is-dependency-injection)
+- [Benefits of Dependency Injection Containers](#benefits-of-dependency-injection-containers)
+- [What is the Apache Felix Service Component Runtime?](#what-is-the-apache-felix-service-component-runtime)
+    - [Getting started with SCR](#getting-started-with-scr)
+- [Hello World Example](#hello-world-example)
+    - [Completed Project Download](#completed-project-download)
+        - [Completed Project Contents](#completed-project-contents)
+    - [Maven Project](#maven-project)
+        - [HelloScrWorld.java](#helloscrworldjava)
+        - [Parent pom.xml](#parent-pomxml)
+        - [Project pom.xml](#project-pomxml)
+    - [Build output](#build-output)
+        - [Generated Manifest File](#generated-manifest-file)
+        - [Generated SCR Descriptor \(com.stackleader.training.osgi.scr.HelloScrWorld.xml\)](#generated-scr-descriptor-comstackleadertrainingosgiscrhelloscrworldxml)
+- [Running the Project](#running-the-project)
+- [Part 2](#part-2)
+
+<!-- /MarkdownTOC -->
+
+#### Overview
 With project Jigsaw and Java 9 coming soon (~March 2017), modular software has become a hot topic of discussion at conferences and meet-ups. 
 For us fans of OSGi, project Jigsaw is simultaneously exciting and disappointing. It's exciting to see the community focusing on and discussing the many benefits of modularity, but it's also disappointing to see that project Jigsaw will for now largely fail to meet the needs of application developers who wish to build robust modular software systems (more on this in a future blog perhaps). The good news of course is that java developers already have access to a robust and mature framework for developing modular software systems, OSGi. In this post, I'd like to introduce the Apache Felix Service Component Runtime (SCR) implementation of the OSGi Declarative Services Specification, and how it can be used as a powerful dependency injection container to facilitate and enforce many OOP (Object Oriented Programming) best practices as you develop modular software with OSGi.
 
@@ -16,7 +38,7 @@ For us fans of OSGi, project Jigsaw is simultaneously exciting and disappointing
 Dependency injection is a form of [\"inversion of control\"](https://en.wikipedia.org/wiki/Inversion_of_control) where instead of an object being passed all of its dependencies through a **manual** call to its constructor, or through building or manually locating them,they are provided (i.e. injected) to the object by a container. Many injection containers emphasize or enforce "constructor injection", but its the container that takes on the responsibility for instantiating the object with the references to its dependencies. The idea of a container managing the life-cycle of objects is something that can take some getting use to if you are new to the world of dependency injection; however, once it is understood that objects that will undergo dependency injection are objects that are "managed" by a container, it should be easier to get your head around the concept.
 
 #### Benefits of Dependency Injection Containers
-There are many significant benefits to using a dependency injection container, but I will only cover this briefly since the topic has been covered well elsewhere (e.g. [here](https://www.youtube.com/watch?v=8RGhT-YySDY)){:target="_blank"}. 
+There are many significant benefits to using a dependency injection container, but I will only cover this briefly since the topic has been covered well elsewhere (e.g. [here](https://www.youtube.com/watch?v=8RGhT-YySDY){:target="_blank"}). 
 <div class="normal-list-style">
     <ul>
         <li>Reduces boilerplate (e.g. factories, singletons)</li>
@@ -56,8 +78,6 @@ The completed example project contains the latest apache-felix distribution supp
 ![Completed Project Contents](/img/blog/scr_example_1.png)
 
 ##### Maven Project 
-
-##### Overview
 As you can see below, our maven project is ordinary. It contains a parent pom, and a single module for building our first OSGi bundle. This bundle contains only a single java class. The project contents our shown below and heavily annotated to explain the contents.
 ![Maven Project Contents](/img/blog/scr_example_2.png)
 
@@ -230,11 +250,11 @@ public class HelloScrWorld {
 </project>
 {% endhighlight %} 
 
-###### Build output
+##### Build output
 An ordinary 'mvn install' command will produce the following jar file.
 ![Jar Contents](/img/blog/scr_example_3.png)
 
-####### Generated Manifest File
+###### Generated Manifest File
 
 {% highlight text %}
 Manifest-Version: 1.0
@@ -253,7 +273,7 @@ Service-Component: OSGI-INF/com.stackleader.training.osgi.scr.HelloScrWo
 Tool: Bnd-3.0.0.201509101326
 {% endhighlight %} 
 
-####### Generated SCR Descriptor (com.stackleader.training.osgi.scr.HelloScrWorld.xml)
+###### Generated SCR Descriptor (com.stackleader.training.osgi.scr.HelloScrWorld.xml)
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -305,5 +325,5 @@ Example Output:
 Full Example Shell)
 ![Project Run Summary](/img/blog/scr_example_4.png)
 
-### Part 2
+#### Part 2
 In [part 2](/osgi/2016/05/27/dependency-injection-and-osgi_part_2.html){:target="_blank"}, we will cover creating and consuming services with SCR.
