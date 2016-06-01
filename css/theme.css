@@ -5568,10 +5568,20 @@ footer.bg-dark a {
     padding-bottom: 240px !important;
   }
 }
-.normal-list-style ul{
+.post-snippet ul{
     list-style: initial; 
     padding: 0px 0px 0px 20px;
 }
-ol.normal-list-style {
+.post-snippet ol {
     padding: 0px 0px 0px 20px;
+}
+
+.post-snippet ul.post-meta {
+    list-style-type: none;
+    padding: 0;
+}
+
+.masonry-item ul {
+    list-style-type: none;
+    padding: 0; 
 }
