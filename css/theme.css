@@ -5572,3 +5572,6 @@ footer.bg-dark a {
     list-style: initial; 
     padding: 0px 0px 0px 20px;
 }
+ol.normal-list-style {
+    padding: 0px 0px 0px 20px;
+}
