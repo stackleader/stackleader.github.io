@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Getting Started with AWS Lambda REST Services Part 1"
+title:  "Getting Started with AWS Lambda REST Services Part 1 of 3"
 description: "Part 1 of this post will describe how to setup the AWS Lambda functions for serverless REST services."
 imageSmall: /img/blog/aws_lambda_small.png
 imageLarge: /img/blog/aws_lambda_large.png
@@ -23,7 +23,7 @@ This blog post will outline how to configure AWS Lambda functions to synchronous
 
 The API Gateway from AWS allows developers to create web service apis that are capable of integrating with other web services or synchronously calling Lambda functions.  The API Gateway taps into IAM so that developers can leverage granular security policies to secure the services.
 
-Part 1 of this post will define how to configure the Lambda functions.  Part 2 will define how to setup the API Gateway and security policies in IAM.
+Part 1 of this post will define how to configure the Lambda functions.  [Part 2](/cloud/2016/06/01/getting-started-aws-lambda-http-part2.html) will define how to setup the API Gateway.  Part 3 will describe how to configure security policies in IAM and deploy the API.
 
 #### Configure the getContacts Lambda Functions
 Go to the AWS Lambda console and select Create a Lambda Function.  If this is your first time creating a function, select Get Started.  AWS provides blueprints to help with defining basic project configuration.  Search in the filter for `hello-world`.  The `hello-world` blueprint defines a basic Node Lambda function.
