@@ -138,9 +138,8 @@ For the source, you can checkout the parent project code from [github](https://g
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.stackleader</groupId>
-    <artifactId>com.stackleader.training.osgi.felix.plugin</artifactId>
-    <!--    Note the non-standard packaging type of 'bundle'-->
-    <packaging>bundle</packaging>
+    <artifactId>com.stackleader.training.osgi.bnd.plugin</artifactId>
+    <packaging>jar</packaging>
     
     <parent>
         <groupId>com.stackleader</groupId>
@@ -148,7 +147,6 @@ For the source, you can checkout the parent project code from [github](https://g
         <version>0.0.1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-   
     <dependencies>
         <dependency>
             <groupId>biz.aQute.bnd</groupId>
@@ -163,24 +161,29 @@ For the source, you can checkout the parent project code from [github](https://g
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <extensions>true</extensions>
+                <groupId>biz.aQute.bnd</groupId>
+                <artifactId>bnd-maven-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>bnd-process</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.0</version>
                 <configuration>
-                    <instructions>
-                        <!--This instruction tells the maven bundle plugin to process 
-                         all SCR annotations and include the component declarations in 
-                        our manfiest file. -->
-                        <Service-Component>*</Service-Component>
-                        <!-- This is included as a best practice, by default this plugin 
-                        will expose all packages. In our case, we do not want to expose 
-                        any packages.-->
-                        <Export-Package></Export-Package>
-                    </instructions>
+                    <archive>
+                        <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+                    </archive>
                 </configuration>
-            </plugin>  
+            </plugin>
         </plugins>
-    </build>    
+    </build>
 </project>
 {% endhighlight %} 
 ###### MANIFEST.MF
