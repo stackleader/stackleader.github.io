@@ -187,7 +187,7 @@ For the source, you can checkout the parent project code from [github](https://g
 </project>
 {% endhighlight %} 
 ###### MANIFEST.MF
-{% highlight text %} 
+{% highlight text %}
 Manifest-Version: 1.0
 Bundle-SymbolicName: com.stackleader.training.osgi.bnd.plugin
 Archiver-Version: Plexus Archiver
