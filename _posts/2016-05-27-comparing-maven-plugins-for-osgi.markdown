@@ -20,11 +20,13 @@ tags: [osgi, dependency_injection]
             - [List of differences \(see above for details\)](#list-of-differences-see-above-for-details)
     - [Example Projects](#example-projects)
         - [bnd-maven-plugin project](#bnd-maven-plugin-project)
+        - [Tree View](#tree-view)
             - [bnd file](#bnd-file)
             - [bnd.bnd](#bndbnd)
             - [pom.xml](#pomxml)
             - [MANIFEST.MF](#manifestmf)
         - [Felix maven-bundle-plugin project](#felix-maven-bundle-plugin-project)
+        - [Tree View](#tree-view-1)
             - [pom.xml](#pomxml-1)
             - [MANIFEST.MF](#manifestmf-1)
 
@@ -130,6 +132,9 @@ For the source, you can checkout the parent project code from [github](https://g
 
 ##### bnd-maven-plugin project
 
+##### Tree View
+![Tree View](/img/blog/bnd_project_tree.png)
+
 ###### bnd file
 A bnd file by the name of "bnd.bnd" is expected to be at the root of the project by default.
 
@@ -221,6 +226,9 @@ Build-Jdk: 1.8.0_74
 {% endhighlight %}
 
 ##### Felix maven-bundle-plugin project
+
+##### Tree View
+![Tree View](/img/blog/felix_project_tree.png)
 
 ###### pom.xml
 {% highlight xml %}
