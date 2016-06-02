@@ -20,7 +20,7 @@ tags: [osgi, dependency_injection]
             - [List of differences \(see above for details\)](#list-of-differences-see-above-for-details)
     - [Example Projects](#example-projects)
         - [bnd-maven-plugin project](#bnd-maven-plugin-project)
-            - [bnd.bnd file](#bndbnd-file)
+            - [bnd file](#bnd-file)
             - [bnd.bnd](#bndbnd)
             - [pom.xml](#pomxml)
             - [MANIFEST.MF](#manifestmf)
@@ -130,8 +130,8 @@ For the source, you can checkout the parent project code from [github](https://g
 
 ##### bnd-maven-plugin project
 
-###### bnd.bnd file
-This file is expected to be at the root of the project by default.
+###### bnd file
+A bnd file by the name of "bnd.bnd" is expected to be at the root of the project by default.
 
 ###### bnd.bnd
 {% highlight text %}
