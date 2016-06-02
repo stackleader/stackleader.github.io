@@ -186,7 +186,9 @@ For the source, you can checkout the parent project code from [github](https://g
     </build>
 </project>
 {% endhighlight %} 
+
 ###### MANIFEST.MF
+
 {% highlight text %}
 Manifest-Version: 1.0
 Bundle-SymbolicName: com.stackleader.training.osgi.bnd.plugin
