@@ -43,7 +43,7 @@ There are many significant benefits to using a dependency injection container, b
     <ul>
         <li>Reduces boilerplate (e.g. factories, singletons)</li>
         <li>Simplifies use of abstractions</li>
-        <li>Dependency graph is explicit, making it easier to avoid dependency cycles (very common in when static object references are easy to reference… i.e. singleton pattern)</li>
+        <li>Dependency graph is explicit, making it easier to avoid dependency cycles (very common when static object references are easy to reference… i.e. singleton pattern)</li>
         <li>Testing is simplified
             <ul>
                 <li>Dependencies are explicit</li>
