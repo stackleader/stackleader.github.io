@@ -20,6 +20,8 @@ tags: [osgi, dependency_injection]
             - [List of differences \(see above for details\)](#list-of-differences-see-above-for-details)
     - [Example Projects](#example-projects)
         - [bnd-maven-plugin project](#bnd-maven-plugin-project)
+            - [bnd.bnd file](#bndbnd-file)
+            - [bnd.bnd](#bndbnd)
             - [pom.xml](#pomxml)
             - [MANIFEST.MF](#manifestmf)
         - [Felix maven-bundle-plugin project](#felix-maven-bundle-plugin-project)
@@ -127,6 +129,14 @@ For both examples, we will reuse the hello-world SCR compoment java code. The go
 For the source, you can checkout the parent project code from [github](https://github.com/stackleader/osgi-examples){:target="_blank"}.
 
 ##### bnd-maven-plugin project
+
+###### bnd.bnd file
+This file is expected to be at the root of the project by default.
+
+###### bnd.bnd
+{% highlight text %}
+Service-Component: *
+{% endhighlight %} 
 
 ###### pom.xml
 {% highlight xml %}
