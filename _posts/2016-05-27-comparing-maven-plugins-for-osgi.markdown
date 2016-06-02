@@ -178,7 +178,9 @@ For the source, you can checkout the parent project code from [github](https://g
                 <version>3.0.0</version>
                 <configuration>
                     <archive>
-                        <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+                        <manifestFile>
+                           ${project.build.outputDirectory}/META-INF/MANIFEST.MF
+                        </manifestFile>
                     </archive>
                 </configuration>
             </plugin>
