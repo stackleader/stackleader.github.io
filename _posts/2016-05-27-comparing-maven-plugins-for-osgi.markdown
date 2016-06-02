@@ -117,7 +117,7 @@ The third significant difference between the two plugins is in the details of th
  Include-Resource:    ${project.build.resources}
  Private-Package:       *
 {% endhighlight %} 
-(Source: [link](https://github.com/bndtools/bnd/blob/master/maven/bnd-maven-plugin/src/main/java/aQute/bnd/maven/plugin/BndMavenPlugin.java){:target="_blank"})
+([source](https://github.com/bndtools/bnd/blob/master/maven/bnd-maven-plugin/src/main/java/aQute/bnd/maven/plugin/BndMavenPlugin.java){:target="_blank"})
 
 ###### List of differences (see above for details)
 1. Bundle-SymbolicName 
