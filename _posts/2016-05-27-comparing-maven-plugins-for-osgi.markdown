@@ -98,7 +98,7 @@ The third significant difference between the two plugins is in the details of th
  Bundle-Vendor:      <organization>
  Include-Resource:    ${project.build.resources}
 {% endhighlight %} 
-(Note: the method references are referring to maven plugin API [link](https://maven.apache.org/ref/3.2.3/apidocs/org/apache/maven/project/MavenProject.html), but this content is derived from the pom.xml. [source](http://svn.apache.org/repos/asf/felix/trunk/tools/maven-bundle-plugin/src/main/java/org/apache/felix/bundleplugin/BundlePlugin.java){:target="_blank"})
+([source](http://svn.apache.org/repos/asf/felix/trunk/tools/maven-bundle-plugin/src/main/java/org/apache/felix/bundleplugin/BundlePlugin.java){:target="_blank"})
 
 ###### bnd-maven-plugin bnd defaults
 {% highlight text %}
