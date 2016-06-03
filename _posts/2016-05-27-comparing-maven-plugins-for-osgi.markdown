@@ -21,8 +21,7 @@ tags: [osgi, dependency_injection]
     - [Example Projects](#example-projects)
         - [bnd-maven-plugin project](#bnd-maven-plugin-project)
         - [Tree View](#tree-view)
-            - [bnd file](#bnd-file)
-            - [bnd.bnd](#bndbnd)
+            - [bnd file \(Optional\)](#bnd-file-optional)
             - [pom.xml](#pomxml)
             - [MANIFEST.MF](#manifestmf)
         - [Felix maven-bundle-plugin project](#felix-maven-bundle-plugin-project)
@@ -54,13 +53,8 @@ Example:
     <extensions>true</extensions>
     <configuration>
         <instructions>
-            <!--This instruction tells the maven bundle plugin to process 
-             all SCR annotations and include the component declarations in 
-            our manfiest file. -->
-            <Service-Component>*</Service-Component>
             <!-- This is included as a best practice, by default this plugin 
-            will expose all packages. In our case, we do not want to expose 
-            any packages.-->
+            will expose <groupId>.<artifactId>.* -->
             <Export-Package></Export-Package>
         </instructions>
     </configuration>
@@ -69,21 +63,29 @@ Example:
 
 The bnd-maven-plugin allows the options to either use an external bnd file, or embed bnd directives directly into the plugin configuration of the pom.xml.
 
-Example of embedding bnd content in pom.xml:
+Example of embedding bnd content in pom.xml: 
 {% highlight xml %}
 <plugin>
     <groupId>biz.aQute.bnd</groupId>
     <artifactId>bnd-maven-plugin</artifactId>
+    <version>3.2.0</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>bnd-process</goal>
+            </goals>
+        </execution>
+    </executions>
     <configuration>
-        <bnd><![CDATA[
--exportcontents:\
- org.example.api,\
- org.example.types
--sources: true
-]]></bnd>
+        <bnd>
+            <![CDATA[
+            -exportcontents: ${packages;VERSIONED}
+            ]]>
+        </bnd>
     </configuration>
 </plugin>
 {% endhighlight %} 
+(This configuration will parse org.osgi.annotation.versioning.Version annotations to simplify management of package versioning info)
 
 ##### BND Defaults
 
@@ -133,15 +135,10 @@ For the source, you can checkout the parent project code from [github](https://g
 ##### bnd-maven-plugin project
 
 ##### Tree View
-![Tree View](/img/blog/bnd_project_tree.png)
+![Tree View](/img/blog/project_tree.png)
 
-###### bnd file
-A bnd file by the name of "bnd.bnd" is expected to be at the root of the project by default.
-
-###### bnd.bnd
-{% highlight text %}
-Service-Component: *
-{% endhighlight %} 
+###### bnd file (Optional)
+A bnd file by the name of "bnd.bnd" can be added to the root directory if custom bnd directives are required for your project; however, in this instance we do not require any configuration since SCR annotations are now processed by default by bnd. 
 
 ###### pom.xml
 {% highlight xml %}
@@ -164,8 +161,12 @@ Service-Component: *
     </parent>
     <dependencies>
         <dependency>
-            <groupId>biz.aQute.bnd</groupId>
-            <artifactId>bndlib</artifactId>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.annotation</artifactId>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -193,9 +194,7 @@ Service-Component: *
                 <version>3.0.0</version>
                 <configuration>
                     <archive>
-                        <manifestFile>
-                           ${project.build.outputDirectory}/META-INF/MANIFEST.MF
-                        </manifestFile>
+                        <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
                     </archive>
                 </configuration>
             </plugin>
@@ -211,7 +210,7 @@ Manifest-Version: 1.0
 Bundle-SymbolicName: com.stackleader.training.osgi.bnd.plugin
 Archiver-Version: Plexus Archiver
 Built-By: dcnorris
-Bnd-LastModified: 1464817461632
+Bnd-LastModified: 1464969212686
 Bundle-ManifestVersion: 2
 Import-Package: org.slf4j;version="[1.7,2)"
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.5))"
@@ -253,8 +252,12 @@ Build-Jdk: 1.8.0_74
    
     <dependencies>
         <dependency>
-            <groupId>biz.aQute.bnd</groupId>
-            <artifactId>bndlib</artifactId>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.annotation</artifactId>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -270,12 +273,8 @@ Build-Jdk: 1.8.0_74
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <!--This instruction tells the maven bundle plugin to process 
-                         all SCR annotations and include the component declarations in 
-                        our manfiest file. -->
-                        <Service-Component>*</Service-Component>
                         <!-- This is included as a best practice, by default this plugin 
-                        will expose all packages. In our case, we do not want to expose 
+                        will expose all <groupId>.<artifactId>.* packages. In our case, we do not want to expose 
                         any packages.-->
                         <Export-Package></Export-Package>
                     </instructions>
@@ -288,7 +287,7 @@ Build-Jdk: 1.8.0_74
 ###### MANIFEST.MF
 {% highlight text %}
 Manifest-Version: 1.0
-Bnd-LastModified: 1464817552512
+Bnd-LastModified: 1464969332232
 Build-Jdk: 1.8.0_74
 Built-By: dcnorris
 Bundle-ManifestVersion: 2
