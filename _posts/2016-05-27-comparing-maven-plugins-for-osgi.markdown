@@ -85,7 +85,7 @@ Example of embedding bnd content in pom.xml:
     </configuration>
 </plugin>
 {% endhighlight %} 
-(This configuration will parse org.osgi.annotation.versioning.Version annotations to simplify management of package versioning info)
+This example configuration will parse org.osgi.annotation.versioning.Version annotations on package-info.java classes to simplify management of package versioning info.
 
 ##### BND Defaults
 
