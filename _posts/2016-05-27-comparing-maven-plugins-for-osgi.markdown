@@ -32,7 +32,7 @@ tags: [osgi, dependency_injection]
 <!-- /MarkdownTOC -->
 
 ### Overview
-This post will cover the differences between the existing options for building OSGi bundles using Maven and provide some useful examples. Historically, there has only been one maven plugin option for building OSGi bundles, the Apache Felix [maven-bundle-plugin](http://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html); however, another plugin option has recently become available [(see announcement)](http://njbartlett.name/2015/03/27/announcing-bnd-maven-plugin.html), the [bnd-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-maven-plugin){:target="_blank"}. Both plugins rely on bndlib (often referred to as the swiss army knife of OSGi) under the hood, but they diverge a bit in the details. 
+This post will cover the differences between the existing options for building OSGi bundles using Maven and provide some useful examples. Historically, there has only been one maven plugin option for building OSGi bundles, the Apache Felix [maven-bundle-plugin](http://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html); however, another plugin option has recently become available [(see announcement)](http://njbartlett.name/2015/03/27/announcing-bnd-maven-plugin.html), the [bnd-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-maven-plugin){:target="_blank"}. Both plugins rely on bnd (often referred to as the swiss army knife of OSGi) under the hood, but they diverge a bit in the details. 
 
 #### Differences between maven-bundle-plugin and bnd-maven-plugin
 
