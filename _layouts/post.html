@@ -12,7 +12,7 @@ layout: default
 {% endif %}
 {% endfor %}
 {% if tag %}
-{% capture tags_content_temp %}{{ tags_content }}<a href="{{ site.github.url }}/tags/{{ tag.slug }}/">{{
+{% capture tags_content_temp %}{{ tags_content }}<a href="/tags/{{ tag.slug }}/">{{
     tag.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
 {% assign tags_content = tags_content_temp %}
 {% endif %}
@@ -33,7 +33,7 @@ layout: default
                         <a href="https://stackleader.com/">Home</a>
                     </li>
                     <li>
-                        <a href="{{ site.github.url }}/">Blog</a>
+                        <a href="/">Blog</a>
                     </li>
                 </ol>
             </div>
