@@ -1,10 +1,10 @@
 <div class="col-sm-6 post-snippet masonry-item">
-    <a href="{{ post.url | prepend: site.github.url }}">
-        <img alt="Post Image" src="{{ post.imageSmall | prepend: site.github.url }}"/>
+    <a href="{{ post.url}}">
+        <img alt="Post Image" src="{{ post.imageSmall}}"/>
     </a>
 
     <div class="inner">
-        <a href="{{ post.url | prepend: site.github.url }}">
+        <a href="{{ post.url}}">
             <h5 class="mb0">{{ post.title }}</h5>
                             <span class="inline-block mb16" style="margin-bottom:0">
                                 {{ post.date | date: "%b %-d, %Y" }} <br/>
@@ -17,7 +17,7 @@
         <p>
             {{ post.description }}
         </p>
-        <a class="btn btn-sm" href="{{ post.url | prepend: site.github.url }}">Read More</a>
+        <a class="btn btn-sm" href="{{ post.url}}">Read More</a>
         <ul class="tags pull-right">
             <li>
                 <a class="btn btn-sm btn-icon" href="#">
