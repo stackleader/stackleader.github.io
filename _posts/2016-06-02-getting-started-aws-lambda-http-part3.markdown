@@ -68,22 +68,24 @@ Save both of the credentials sets for later.
 #### GET Security Policy
 Select Users->contacts-get->Inline Policies->"...To create one, click here." to create an inline policy.  Select Policy Generator->Select.  Set Effect to Allow, Service to Amazon API Gateway, Actions to Invoke, and set the Amazon Resource Name to the ARN of /contacts->GET and /contacts/{id}->GET.  These ARNs where recorded in the Securing API Gateway section above.  Separate the two ARNs by a comma e.g. `arn:aws:execute-api:us-east-1:111111241083:aaaaaay4eb/*/GET/contacts, arn:aws:execute-api:us-east-1:111111241083:aaaaaay4eb/*/GET/contacts/*`
 
+![Inline Policies](/img/blog/aws-lambda-42.png)
+
 Note that these ARNs will be unique to your account.  You must follow the Securing API Gateway section to get this part correct.
 
 Select Add Statement.
 
 ![Add IAM to endpoint](/img/blog/aws-lambda-37.png)
 
-Select Next Step->Attach Policy
+Select Next Step->Apply Policy
 
 #### POST Security Policy
 
 Select Users->contacts-post->Inline Policies->"...To create one, click here." to create an inline policy.  Select Policy Generator->Select.  Set Effect to Allow, Service to Amazon API Gateway, Actions to Invoke, and set the Amazon Resource Name to the ARN of /contacts->POST.  This ARN was recorded in the Securing API Gateway section above.
 
-Select Next Step->Attach Policy
+Select Next Step->Apply Policy
 
 ### Deploy API
-Select Actions->Deploy API.  Set Deployment Stage to [New Stage] and set Stage Name to test.
+Return to the Amazon Gateway API service. Select <b>Actions->Deploy API</b>.  Set Deployment Stage to [New Stage] and set Stage Name to test.
 
 ![Deploy API](/img/blog/aws-lambda-38.png)
 

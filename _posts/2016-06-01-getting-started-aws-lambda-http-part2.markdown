@@ -143,4 +143,4 @@ You should get a similar response
 
 ![response](/img/blog/aws-lambda-30.png)
 
-Congratulations!  You have configured API Gateway to synchronously call Lambda functions.  In part 3 of this post we will configure the IAM security policies and deploy the api so that it is publicly accessible.
+Congratulations!  You have configured API Gateway to synchronously call Lambda functions.  In [part 3](/cloud/2016/06/02/getting-started-aws-lambda-http-part3.html) of this post we will configure the IAM security policies and deploy the api so that it is publicly accessible.

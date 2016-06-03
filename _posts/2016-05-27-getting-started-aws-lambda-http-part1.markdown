@@ -168,7 +168,7 @@ Test the `addContact` function with an empty event object to verify that the err
 }
 {% endhighlight %}
 
-Now test with an event object containing a new contact.
+Now test with an event object containing a new contact. (note: you will need to modify your test input through <b>Actions->Configure test event</b>)
 
 Event object:
 {% highlight json %}
@@ -187,4 +187,4 @@ Function response:
 }
 {% endhighlight %}
 
-If both tests work then congratulations on creating your first Lambda functions.  Part 2 of this post will describe how to configure these functions to run synchronously on an API Gateway HTTP request.
+If both tests work then congratulations on creating your first Lambda functions.  [Part 2](/cloud/2016/06/01/getting-started-aws-lambda-http-part2.html) of this post will describe how to configure these functions to run synchronously on an API Gateway HTTP request.
