@@ -160,4 +160,4 @@ message HelloReply {
 ![Generated Source Code](/img/blog/grpc_maven_3.png)
 
 ### Implementing gRPC Service and Client
-In [Part 2](/osgi/2016/06/24/implementing-grpc-service-client.html){:target="_blank"} we will cover the basics of how to implement a gRPC service and client using the API jar generated from this maven build.
+In [Part 2](/grpc/2016/06/24/implementing-grpc-service-client.html){:target="_blank"} we will cover the basics of how to implement a gRPC service and client using the API jar generated from this maven build.
