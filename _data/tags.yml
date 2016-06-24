@@ -18,3 +18,9 @@
 
 - slug: node
   name: Node.js
+
+- slug: maven
+  name: Maven
+
+- slug: grpc
+  name: gRPC
