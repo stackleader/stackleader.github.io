@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Generating gRPC code using Maven"
+title:  "Generating gRPC Code using Maven"
 description: "This post cover the basics of generating GRPC code using Maven."
 imageSmall: /img/blog/grpc.png
 imageLarge: /img/blog/grpc_large.png
@@ -16,7 +16,7 @@ tags: [grpc, maven]
     - [pom.xml](#pomxml)
     - [helloworld.proto](#helloworldproto)
     - [Generated Source Code](#generated-source-code)
-- [Implementing gRPC Service and client](#implementing-grpc-service-and-client)
+- [Implementing gRPC Service and Client](#implementing-grpc-service-and-client)
 
 <!-- /MarkdownTOC -->
 
@@ -159,5 +159,5 @@ message HelloReply {
 #### Generated Source Code
 ![Generated Source Code](/img/blog/grpc_maven_3.png)
 
-### Implementing gRPC Service and client
+### Implementing gRPC Service and Client
 In [Part 2](/osgi/2016/06/24/implementing-grpc-service-client.html){:target="_blank"} we will cover the basics of how to implement a gRPC service and client using the API jar generated from this maven build.

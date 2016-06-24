@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Implementing gRPC service and client"
+title:  "Implementing gRPC Service and Client"
 description: "This explains how to use generated gRPC code to implement and consume gRPC services"
 imageSmall: /img/blog/grpc.png
 imageLarge: /img/blog/grpc_large.png
@@ -15,14 +15,14 @@ tags: [grpc, maven]
     - [Project Structure](#project-structure)
     - [Implementing the Service](#implementing-the-service)
         - [GreeterService.java](#greeterservicejava)
-    - [Implementing the Server and registering our service implementation](#implementing-the-server-and-registering-our-service-implementation)
+    - [Implementing the Server and Registering our Service Implementation](#implementing-the-server-and-registering-our-service-implementation)
         - [HelloWorldServer.java](#helloworldserverjava)
-    - [Implementing the client](#implementing-the-client)
+    - [Implementing the Client](#implementing-the-client)
     - [Running the example in the StackLeader Karaf container](#running-the-example-in-the-stackleader-karaf-container)
         - [Step 1](#step-1)
         - [Step 2](#step-2)
         - [Step 3](#step-3)
-        - [Install the demo feature file](#install-the-demo-feature-file)
+        - [Install the Demo Feature File](#install-the-demo-feature-file)
         - [Step 4](#step-4)
     - [Expected Results](#expected-results)
 
@@ -68,7 +68,7 @@ public class GreeterService extends GreeterGrpc.AbstractGreeter implements Binda
 }
 {% endhighlight %} 
 
-#### Implementing the Server and registering our service implementation
+#### Implementing the Server and Registering our Service Implementation
 To expose our service implementation, a gRPC server endpoint needs to be constructed. In this case, we have registered our service implementation as an implementation of the gRPC BindableService interface, and as a result we can easily inject this implementation into our Server class for registration.  Additionally, we have registered our HelloWorldServer class as implementing an empty GrpcServer interface in order to provide a lifecycle hook for our service client (i.e. we want our client implementation to wait for the server before it tries to make a connection). 
 
 ##### HelloWorldServer.java
@@ -136,7 +136,7 @@ public class HelloWorldServer implements GrpcServer {
 }
 {% endhighlight %} 
 
-#### Implementing the client
+#### Implementing the Client
 In order to implement a gRPC client, we need to create an instance of one of the stub classes implementing the GreeterBlockingClient class or the GreeterFutureClient class. For this example, we have chosen to instantiate a GreeterGrpc.GreeterBlockingStub instance. As mentioned above, in order to ensure the gRPC server has been started, we inject the GrpcServer service into our HelloWorldClient component. After the gRPC Server is injected we make a connection to the server and invoke the sayHello method.
 
 HelloWorldClient.java
@@ -228,7 +228,7 @@ Start the karaf shell
 docker run -it -v ~/.m2:/opt/karaf/.m2 stackleader/karaf shell
 {% endhighlight %}
 
-##### Install the demo feature file
+##### Install the Demo Feature File
 From the karaf shell run the following commands.
 {% highlight text %}
 repo-add mvn:com.stackleader/com.stackleader.training.grpc.helloworld.feature/0.0.1/xml/features
