@@ -212,7 +212,7 @@ public class HelloWorldClient {
 #### Running the example in the StackLeader Karaf container
 For convenience, we have made available an open source Docker container that will be used in the Karaf blog posts.
 
-[stackleader-karaf-container](https://github.com/stackleader/karaf-container)
+[stackleader-karaf-container](https://github.com/stackleader/karaf-container){:target="_blank"}
 
 ##### Step 1
 Clone and build the project from [github](https://github.com/stackleader/karaf-grpc){:target="_blank"} (i.e. mvn clean install from the root of the project).
