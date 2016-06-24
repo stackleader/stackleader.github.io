@@ -29,7 +29,7 @@ tags: [grpc, maven]
 <!-- /MarkdownTOC -->
 
 ### Overview
-This post expands on our previous blog on [generating gRPC code with Maven](/osgi/2016/06/24/generating-grpc-code-with-maven.html){:target="_blank"}, and explains how to use the generated api jar to implement a gRPC service and client. This example uses the StackLeader dockerized karaf container to illustrate running the service and connecting to the service with the client. This is largely done to simplify the process of running the example.  
+This post expands on our previous blog on [generating gRPC code with Maven](/grpc/2016/06/24/generating-grpc-code-with-maven.html){:target="_blank"}, and explains how to use the generated api jar to implement a gRPC service and client. This example uses the StackLeader dockerized karaf container to illustrate running the service and connecting to the service with the client. This is largely done to simplify the process of running the example.  
 
 #### Source Code
 The source code for this example is available on [github](https://github.com/stackleader/karaf-grpc){:target="_blank"}.
@@ -39,6 +39,7 @@ The source code for this example is available on [github](https://github.com/sta
 
 #### Implementing the Service 
 To implement the service, we need to extend the generated GreeterGrpc.AbstractGreeter class. 
+
 ##### GreeterService.java
 {% highlight java %}
 package com.stackleader.training.grpc.helloworld.server.internal;
