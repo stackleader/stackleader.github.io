@@ -21,7 +21,7 @@ tags: [grpc, maven]
 <!-- /MarkdownTOC -->
 
 ### Overview
-This post will cover how to generate a GRPC api jar from a .proto service contract using Maven. This generated api jar can then be used to implement a gRPC service implementation and/or a client for consuming a gRPC service.
+This post will cover how to generate a gRPC api jar from a .proto service contract using Maven. This generated api jar can then be used to implement a gRPC service implementation and/or a client for consuming a gRPC service.
 
 #### Source Code
 The source code for this example is available on [github](https://github.com/stackleader/karaf-grpc){:target="_blank"}.
