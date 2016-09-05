@@ -20,7 +20,7 @@ tags: [bash, java, docker]
 <!-- /MarkdownTOC -->
 
 ### Overview
-This post brings together two of my favorite things: bash aliases/functions and docker containers. To those who have not heard, Java 9 will include a new  Java REPL (wikipedia)[https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop] called JShell. This is exciting in a number of ways. Newcomers to the language should find the learning curve less painful, and seasoned developers will gain a useful tool for exploring new libraries and interactive programming. JShell has already become a tool I use daily, and it has largely replaced my habit of writing disposable JUnit tests simply to explore a new libraries behavior or work out a specific function. 
+This post brings together two of my favorite things: bash aliases/functions and docker containers. To those who have not heard, Java 9 will include a new  Java [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) called JShell. This is exciting in a number of ways. Newcomers to the language should find the learning curve less painful, and seasoned developers will gain a useful tool for exploring new libraries and interactive programming. JShell has already become a tool I use daily, and it has largely replaced my habit of writing disposable JUnit tests simply to explore a new libraries behavior or work out a specific function. 
 
 With some help from docker, you can easily start exploring JShell.  
 
