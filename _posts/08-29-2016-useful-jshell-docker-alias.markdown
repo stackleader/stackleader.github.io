@@ -26,6 +26,7 @@ With some help from docker, you can easily start exploring JShell.
 
 ### JShell with Docker
 The following command uses the official openjdk docker hub image.
+
 #### Launch JShell
 {% highlight bash %}
  docker run --rm=true -it openjdk:9 jshell 
