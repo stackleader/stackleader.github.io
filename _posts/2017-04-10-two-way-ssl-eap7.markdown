@@ -27,6 +27,12 @@ tags: [bash, java]
 		- [Resulting XML](#resulting-xml)
 	- [Configure https listener for the undertow subsystem on EAP 7 for SSL](#configure-https-listener-for-the-undertow-subsystem-on-eap-7-for-ssl)
 	- [Configuring the jboss-cli.sh for two-way SSL](#configuring-the-jboss-clish-for-two-way-ssl)
+- [Enforcing HTTPS](#enforcing-https)
+	- [Completely remove https listener \(preferred approach\)](#completely-remove-https-listener-preferred-approach)
+		- [Cli commands](#cli-commands)
+	- [Enforcing HTTPS without removing http listener](#enforcing-https-without-removing-http-listener)
+		- [Add Strict-Transport-Security header](#add-strict-transport-security-header)
+		- [Use servlet api transport guarantee](#use-servlet-api-transport-guarantee)
 
 <!-- /MarkdownTOC -->
 
@@ -124,7 +130,7 @@ name=secure-socket-binding, value=management-https)
 ### Configure https listener for the undertow subsystem on EAP 7 for SSL
 For simplicity, we will use the ManagementRealm in this step. In practice, you may want to setup a new realm for applications or configure the ApplicationRealm.
 {% highlight bash %}
-/subsystem=undertow/server=default-server/https-listener=https:add(socket-binding=https, security-realm=ManagementRealm)
+/subsystem=undertow/server=default-server/https-listener=https:add(socket-binding=https, security-realm=ManagementRealm, verify-client=REQUIRED)
 {% endhighlight %} 
 
 ### Configuring the jboss-cli.sh for two-way SSL
@@ -156,5 +162,49 @@ Update jboss-cli.xml defaults (Optional)
 </default-controller>
 {% endhighlight %} 
 After changing the defaults, it is possible to run the cli without additional parameters.
+</web-app>
+
+## Enforcing HTTPS
+Configuring HTTPS does not enforce the use of https. To prevent the possibility of unsecure connections, you can do a number of things.
+
+### Completely remove https listener (preferred approach)
+To completely remove http as an option, you can remove the undertow http listener and update the references to it. When an edge approapriate proxy is sitting in front of EAP (e.g. apache/nginx), this configuration typically makes the most sense. If there was no proxy redirecting http to https, this setup would not be ideal since it would prevent http redirects to https.
+
+#### Cli commands
+{% highlight bash %}
+/subsystem=undertow/server=default-server/http-listener=default:remove
+/subsystem=undertow/server=default-server/https-listener=default:add(socket-binding="https", security-realm="ManagementRealm", verify-client=REQUIRED)
+{% endhighlight %} 
+
+### Enforcing HTTPS without removing http listener
+
+#### Add Strict-Transport-Security header 
+
+{% highlight bash %}
+/subsystem=undertow/configuration=filter/response-header=hsts-header:add(header-name="Strict-Transport-Security", header-value="max-age=31536000;")
+/subsystem=undertow/server=default-server/host=default-host/filter-ref=hsts-header:add()
+{% endhighlight %} 
+
+#### Use servlet api transport guarantee
+Add transport guarantee to web.xml
+ {% highlight xml %}
+ <?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+version="3.0"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  ...
+  <security-constraint>
+    <web-resource-collection>
+        <web-resource-name>Secure URLs</web-resource-name>
+        <url-pattern>/*</url-pattern>
+    </web-resource-collection>
+    <user-data-constraint>
+        <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
+  ...
+  </web-app>
+ {% endhighlight %} 
 
 <h1 style="page-break-before:always;"></h1>
