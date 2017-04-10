@@ -21,12 +21,12 @@ tags: [bash, java]
 		- [Importing the server certificate to the client](#importing-the-server-certificate-to-the-client)
 		- [Importing the client certificate to the server](#importing-the-client-certificate-to-the-server)
 		- [Asciinema Demo](#asciinema-demo)
-	- [Configure Two Way SSL for the management Interfaces in EAP 7](#configure-two-way-ssl-for-the-management-interfaces-in-eap-7)
-		- [Using the CLI to configure the management interfaces](#using-the-cli-to-configure-the-management-interfaces)
+	- [Configure Two Way SSL for the management Interface in EAP 7](#configure-two-way-ssl-for-the-management-interface-in-eap-7)
+		- [Using the CLI to configure the management interface](#using-the-cli-to-configure-the-management-interface)
 			- [Updating the ManagementRealm for SSL](#updating-the-managementrealm-for-ssl)
-			- [Configure https listener for the undertow subsystem on EAP 7 for SSL](#configure-https-listener-for-the-undertow-subsystem-on-eap-7-for-ssl)
-			- [Resulting XML](#resulting-xml)
-			- [Configuring the jboss-cli.sh for two-way SSL](#configuring-the-jboss-clish-for-two-way-ssl)
+		- [Resulting XML](#resulting-xml)
+	- [Configure https listener for the undertow subsystem on EAP 7 for SSL](#configure-https-listener-for-the-undertow-subsystem-on-eap-7-for-ssl)
+	- [Configuring the jboss-cli.sh for two-way SSL](#configuring-the-jboss-clish-for-two-way-ssl)
 
 <!-- /MarkdownTOC -->
 
@@ -79,14 +79,14 @@ keytool -importcert -alias client -file client.cer -keystore keystore.keystore -
 #### Asciinema Demo 
 <script type="text/javascript" src="https://asciinema.org/a/cms9iztfzalatg83g4l71z0kt.js" id="asciicast-cms9iztfzalatg83g4l71z0kt?speed=2" async></script>
 
-### Configure Two Way SSL for the management Interfaces in EAP 7
+### Configure Two Way SSL for the management Interface in EAP 7
 
 This step assumes the server keystore generated above has been moved to the following location:
 {% highlight bash %}
 $EAP_HOME/ssl/keystore.jks
 {% endhighlight %} 
 
-#### Using the CLI to configure the management interfaces
+#### Using the CLI to configure the management interface
 
 ##### Updating the ManagementRealm for SSL
 
@@ -102,13 +102,7 @@ name=secure-socket-binding, value=management-https)
 /core-service=management/management-interface=http-interface:undefine-attribute(name=socket-binding)
 {% endhighlight %} 
 
-##### Configure https listener for the undertow subsystem on EAP 7 for SSL
-
-{% highlight bash %}
-/subsystem=undertow/server=default-server/https-listener=https:add(socket-binding=https, security-realm=ManagementRealm)
-{% endhighlight %} 
-
-##### Resulting XML
+#### Resulting XML
 
 {% highlight xml %}
 <security-realm name="ManagementRealm">
@@ -127,7 +121,13 @@ name=secure-socket-binding, value=management-https)
 </security-realm>
 {% endhighlight %} 
 
-##### Configuring the jboss-cli.sh for two-way SSL
+### Configure https listener for the undertow subsystem on EAP 7 for SSL
+For simplicity, we will use the ManagementRealm in this step. In practice, you may want to setup a new realm for applications or configure the ApplicationRealm.
+{% highlight bash %}
+/subsystem=undertow/server=default-server/https-listener=https:add(socket-binding=https, security-realm=ManagementRealm)
+{% endhighlight %} 
+
+### Configuring the jboss-cli.sh for two-way SSL
 Update jboss-cli.xml.
 
 {% highlight xml %}
