@@ -12,7 +12,7 @@
 
 - slug: cloud
   name: Cloud
-  
+
 - slug: dependency_injection
   name: Dependency Injection
 
@@ -24,3 +24,12 @@
 
 - slug: grpc
   name: gRPC
+
+- slug: eap_7 
+  name: EAP 7
+
+- slug: bash 
+  name: bash
+
+- slug: java 
+  name: Java

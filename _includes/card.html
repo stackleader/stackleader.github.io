@@ -2,16 +2,13 @@
     <a href="{{ post.url}}">
         <img alt="Post Image" src="{{ post.imageSmall}}"/>
     </a>
-
     <div class="inner">
         <a href="{{ post.url}}">
             <h5 class="mb0">{{ post.title }}</h5>
-                            <span class="inline-block mb16" style="margin-bottom:0">
-                                {{ post.date | date: "%b %-d, %Y" }} <br/>
-                            </span>
-
+            <span class="inline-block mb16" style="margin-bottom:0">
+                {{ post.date | date: "%b %-d, %Y" }} <br/>
+            </span>
         </a>
-
         <p style="margin-bottom: 10px">{{ tags_content }}</p>
         <hr>
         <p>
@@ -25,7 +22,7 @@
                 </a>
             </li>
             <li>
-                <a class="btn btn-sm btn-icon" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.stackleader.com{{ post.url }}" target="_blank"> 
+                <a class="btn btn-sm btn-icon" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.stackleader.com{{ post.url }}" target="_blank">
                     <i class="ti-facebook"></i>
                 </a>
             </li>

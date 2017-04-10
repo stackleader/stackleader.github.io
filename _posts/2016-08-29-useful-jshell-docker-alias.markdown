@@ -12,10 +12,10 @@ tags: [bash, java, docker]
 
 - [Overview](#overview)
 - [JShell with Docker](#jshell-with-docker)
-    - [Launch JShell](#launch-jshell)
-    - [Bash Alias/Function Convenience](#bash-aliasfunction-convenience)
-        - [Adding a lib directory to the classpath](#adding-a-lib-directory-to-the-classpath)
-        - [Adding your current directory to the classpath](#adding-your-current-directory-to-the-classpath)
+	- [Launch JShell](#launch-jshell)
+	- [Bash Alias/Function Convenience](#bash-aliasfunction-convenience)
+		- [Adding a lib directory to the classpath](#adding-a-lib-directory-to-the-classpath)
+		- [Adding your current directory to the classpath](#adding-your-current-directory-to-the-classpath)
 
 <!-- /MarkdownTOC -->
 
