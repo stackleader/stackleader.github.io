@@ -5,8 +5,8 @@ description: "This post provides an introduction to two-way ssl and setup on EAP
 imageSmall: /img/blog/ssl.png
 imageLarge: /img/blog/ssl.png
 date:   2017-04-10 11:48:00 -0400
-categories: bash
-tags: [bash, java]
+categories: eap_7
+tags: [eap_7, java]
 ---
 
 <h1 style="page-break-before:always;"></h1>
@@ -177,6 +177,7 @@ To completely remove http as an option, you can remove the undertow http listene
 {% endhighlight %} 
 
 ### Enforcing HTTPS without removing http listener
+
 
 #### Add Strict-Transport-Security header 
 
