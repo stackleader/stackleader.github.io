@@ -13,7 +13,7 @@ tags: [osgi, camel]
 The Apache Camel CDI component was updated in 2.17 to integrate more seemlessly with CDI. This post shows an example of how to get started defining routes using the java dsl with the use of the camel-cdi component. 
 
 ### Source
-The source code for this example is available on [github](https://github.com/stackleader/karaf-grpc){:target="_blank"}.
+The source code for this example is available on [github](https://github.com/stackleader/camelCdiExample){:target="_blank"}.
 
 ### pom.xml 
 {% highlight xml %}
