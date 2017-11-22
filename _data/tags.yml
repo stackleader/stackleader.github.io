@@ -33,3 +33,10 @@
 
 - slug: java 
   name: Java
+
+- slug: openshift 
+  name: OpenShift
+
+
+- slug: kubernetes 
+  name: Kubernetes

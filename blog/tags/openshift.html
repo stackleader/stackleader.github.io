@@ -1,0 +1,129 @@
+---
+layout: default
+tag: openshift
+permalink: /tags/openshift/
+---
+<section class="page-title page-title-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="uppercase mb0">StackLeader Blog</h3>
+            </div>
+            <div class="col-md-6 text-right">
+                <ol class="breadcrumb breadcrumb-2">
+                    <li>
+                        <a href="https://stackleader.com/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" class="active">OpenShift</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+<section class="bg-secondary">
+    <div class="container">
+        <div class="col-md-9">
+            <div class="row masonry-loader">
+                <div class="col-sm-12 text-center">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+            <div class="row masonry masonryFlyIn mb40">
+                {% for post in site.tags[page.tag] %}
+
+                {% if post.tags.size > 0 %}
+                {% capture tags_content %}Tags {% if post.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
+                {% for post_tag in post.tags %}
+                {% for data_tag in site.data.tags %}
+                {% if data_tag.slug == post_tag %}
+                {% assign tag = data_tag %}
+                {% endif %}
+                {% endfor %}
+                {% if tag %}
+                {% capture tags_content_temp %}{{ tags_content }}<a href="/tags/{{ tag.slug }}/">{{ tag.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+                {% assign tags_content = tags_content_temp %}
+                {% endif %}
+                {% endfor %}
+                {% else %}
+                {% assign tags_content = '' %}
+                {% endif %}
+
+                {% include card.html %}
+
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="text-center">
+                    {% if paginator.total_pages > 1 %}
+                    <ul class="pagination">
+                        {% if paginator.previous_page %}
+                        <li>
+                            <a href="{{ paginator.previous_page_path | replace: '//', '/'}}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+
+                        {% else %}
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        {% endif %}
+
+                        {% for page in (1..paginator.total_pages) %}
+                        {% if page == paginator.page %}
+                        <li class="active">
+                            <a href="#">{{ page }}</a>
+                        </li>
+                        {% elsif page == 1 %}
+                        <li>
+                            <a href="{{ paginator.previous_page_path | replace: '//', '/'}}">{{ page }}</a>
+                        </li>
+                        {% else %}
+                        <li>
+                            <a href="{{ site.paginate_path | replace: '//', '/' | replace: ':num', page}}">{{ page }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+
+                        {% if paginator.next_page %}
+                        <li>
+                            <a href="{{ paginator.next_page_path | replace: '//', '/'}}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                        {% else %}
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 hidden-sm">
+            {% include signup.html %}
+            <div class="widget">
+                <h6 class="title">Blog Categories</h6>
+                <hr>
+                {% include tags.html %}
+            </div>
+            <!--end of widget-->
+            
+        </div>
+        <!--end of sidebar-->
+    </div>
+</section>
+
