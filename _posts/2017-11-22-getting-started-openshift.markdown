@@ -13,15 +13,28 @@ tags: [openshift, kubernetes]
 The OpenShift cli contains a convenient utility for testing an OpenShift cluster.  This guide will demonstrate how to
 setup a single node cluster and execute a few commands.
 
-## Fedora/Centos/RHEL
+## Fedora/Centos/RHEL CLI Installation
 Install the following packages
 {% highlight bash %}
 sudo dnf install -y origin-clients docker
 {% endhighlight %}
 
+## Alternative CLI Installation
+Download oc cli client and install docker
+{% highlight bash %}
+wget https://github.com/openshift/origin/releases/download/v3.6.0/openshift-origin-client-tools-v3.6.0-c4dd4cf-linux-64bit.tar.gz
+tar xvf openshift-origin-client-tools-v3.6.0-c4dd4cf-linux-64bit.tar.gz
+sudo cp openshift-origin-client-tools-v3.6.0-c4dd4cf-linux-64bit/oc /usr/bin/
+sudo chmod +x /usr/bin/oc
+sudo dnf install -y docker
+{% endhighlight %}
+
+## Remaining Steps
+
 Add your user to the docker group
 
 {% highlight bash %}
+sudo groupadd docker
 sudo usermod -a -G docker <user name>
 {% endhighlight %}
 
