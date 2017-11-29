@@ -109,3 +109,8 @@ Try running the busybox container in your project ```myproject```
 $ oc run -i -t busybox --image=busybox --restart=Never echo "hello world"
 hello world
 {% endhighlight %}
+
+If you are running ocp inside a virtual machine, you may find it helpful to bind to a different ip address than localhost.
+{% highlight bash %}
+oc cluster up --public-hostname '192.168.56.101'
+{% endhighlight %}
