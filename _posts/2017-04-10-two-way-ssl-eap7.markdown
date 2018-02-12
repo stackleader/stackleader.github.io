@@ -41,7 +41,7 @@ tags: [eap_7, java]
 
 ![two-way_ssl_eap_7](/img/blog/two-way_ssl_eap_7.png)
 
-In this example, a single jks file is used as both the keystore and the truststore for both the client and server. It is important to call attention this detail as it would be common to use separate jks files or in some cases to simply append the trusted certificates or certificate authoricity certs into the jre's truststore.
+In this example, a single jks file is used as both the keystore and the truststore for both the client and server. It is useful to call attention to this detail as it would be common to use separate jks files or in some cases to simply append the trusted certificates or certificate authoricity certs into the jre's truststore. 
 
 
 ### Creating certificates
